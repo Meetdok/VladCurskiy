@@ -1,0 +1,23 @@
+﻿<Page x:Class="VladCurskiy.Pages.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VladCurskiy.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserPage">
+
+    <StackPanel Background="#7FFFFDFD">
+        <Label Content="Имя"/>
+        <TextBox Text="{Binding EditUser.FirstName}"/>
+        <Label Content="Фамилия"/>
+        <TextBox Text="{Binding EditUser.LastName}"/>
+        <Label Content="Статус"/>
+        <ComboBox Text="{Binding EditUser.StatusUser}">
+            <TextBlock>Ушедший</TextBlock>
+            <TextBlock>Пришедший</TextBlock>
+        </ComboBox>
+        <Button Content="Сохранить" Command="{Binding SaveUser}" Margin="348,0,304,0" Height="47"/>
+    </StackPanel>
+</Page>
